@@ -45,3 +45,6 @@
         transform: rotate(360deg);
     }
 }
+#preImg{
+    display: none;
+}
