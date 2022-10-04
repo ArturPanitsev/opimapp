@@ -10,7 +10,7 @@ window.onload = () => {
     preloader.style.animation = 'endLoad 2s';
     body.style.pointerEvents = 'auto';
     body.style.overflow = 'auto';
-    body.style.userSelect = 'all';
+    body.style.userSelect = 'text';
     setTimeout(()=>{
         preloader.style.display = 'none';
     }, 2000)
