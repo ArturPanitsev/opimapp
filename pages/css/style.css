@@ -14,3 +14,13 @@
     flex-wrap: wrap;
     padding: 0 14px;
 }
+@media (max-width: 525px){
+    #koduleht img{
+        max-width: 300px;
+    }
+}
+@media (max-width: 310px){
+    #koduleht img{
+        max-width: 200px;
+    }
+}
