@@ -1,0 +1,226 @@
+:root{
+    --bgImg: url('../assets/img/bg/1.jpg') no-repeat;
+    --background: #111;
+    --background2: #000;
+    --color: #dfdfdf;
+    --color2: #fff;
+    --color3: #777;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+*::selection{
+    color: var(--background2);
+    background-color: var(--color2);
+}
+*::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+    background-color: var(--background2);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--color2);
+    border-radius: 4px;
+}
+a{
+    text-decoration: none;
+    color: var(--color);
+}
+body{
+    margin: 0;
+    background-color: var(--background);
+    color: var(--color);
+}
+#start{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#start::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bgImg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.4) blur(8px);
+    transition: 7s ease;
+}
+#start .content{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+#start .content *{
+    margin: 0;
+    padding: 0;
+}
+#h1{
+    border-bottom: 2px solid var(--color);
+}
+#h1, #h2{
+    overflow: hidden;
+}
+#start .content h1{
+    font-size: 64px;
+    font-weight: 200;
+    padding: 14px;
+}
+#start .content h2{
+    padding: 14px;
+    font-size: 32px;
+    font-weight: 400;
+}
+#goDown{
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    filter: invert(0.8);
+    transition: 0.33s ease;
+}
+#goDown:hover{
+    transform: translate(-50%, 0) scale(110%);
+    filter: invert(0.8) drop-shadow(0 0 7px #fff);
+}
+#goDown img{
+    width: 75px;
+}
+header *{
+    margin: 0;
+    padding: 0;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header a{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header nav a{
+    position: relative;
+    background-color: var(--background2);
+    transition: 0.33s;
+    padding: 14px;
+    white-space: nowrap;
+    user-select: none;
+    outline: none;
+}
+header nav a:hover{
+    background-color: var(--background);
+}
+header nav a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color3);
+    transition: 1s ease;
+}
+header nav a:hover::after{
+    width: 100%;
+    transition: 0.7s ease;
+}
+.selected::after{
+    width: 100%;
+    background-color: var(--color2);
+    animation: selectedAnim 1s ease;
+}
+@keyframes selectedAnim{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+footer{
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--background2);
+}
+footer .l, footer .r{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 14px 0;
+}
+footer .l span, footer .r span{
+    padding: 7px;
+}
+#main{
+    min-height: 100vh;
+}
+@media (max-width: 580px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav a{
+        width: 100%;
+        padding: 14px 0;
+    }
+}
+@media (max-width: 519px){
+    footer{
+        flex-direction: column;
+    }
+    footer .l{
+        border-bottom: 1px solid #222;
+    }
+}
+#main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+iframe{
+    width: 100%;
+    flex: 1;
+}
+#goUp{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 10;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.212);
+    border: none;
+    transition: 0.33s ease;
+    backdrop-filter: blur(8px);
+    display: none;
+    opacity: 0.2;
+}
+#goUp:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.466);
+}
+#goUp img{
+    width: 60px;
+}
