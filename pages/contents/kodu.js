@@ -2,7 +2,7 @@ const kodu = `
     <div id="kodu">
 
         <div>
-            <img src="./pages/img/ivkhk.jpg" width="400px">
+            <img src="./pages/img/ivkhk.jpg">
         </div>
 
         <div>
