@@ -1,0 +1,9 @@
+#kodu{
+    padding-top: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#kodu div{
+    margin: 0 25px;
+}
