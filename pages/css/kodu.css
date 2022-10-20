@@ -7,3 +7,19 @@
 #kodu div{
     margin: 0 25px;
 }
+
+#kodu img{
+    width: 400px;
+}
+@media(max-width: 1000px){
+    #kodu img{
+        width: 300px;
+    }
+}
+@media(max-width: 610px){
+    #kodu{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
